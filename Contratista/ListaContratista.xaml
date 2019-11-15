@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Contratista.ListaContratista">
+             x:Class="Contratista.ListaContratista"
+             Title="Lista">
     <ContentPage.Content>
         <ListView x:Name="listaContratistas" ItemTapped="ListaContratistas_ItemTapped_1"
                   RowHeight="80" BackgroundColor="Transparent" 
