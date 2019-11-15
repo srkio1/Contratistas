@@ -17,7 +17,8 @@ namespace Contratista.Empleado
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class IndexServicio : TabbedPage
 	{
-        int idServicio = 0;
+        private int idServicio = 0;
+        private string nombre_servicio;
         ObservableCollection<Catalogo> catalogos = new ObservableCollection<Catalogo>();
         public ObservableCollection<Catalogo> Catalogos { get { return catalogos; } }
         public IndexServicio(int id_servicio, string nombre, int telefono, string email, string rubro, string estado, int prioridad, decimal calificacion, string foto,
@@ -25,6 +26,7 @@ namespace Contratista.Empleado
         {
             InitializeComponent();
             idServicio = id_servicio;
+            nombre_servicio = nombre;
             txtNombre.Text = nombre;
             txtTelefono.Text = telefono.ToString();
             txtEmail.Text = email;
@@ -52,8 +54,6 @@ namespace Contratista.Empleado
             var catalogosss = JsonConvert.DeserializeObject<List<Catalogo>>(response);
             try
             {
-
-
                 foreach (var item in catalogosss.Distinct())
                 {
                     if (item.id_servicio == idServicio)
@@ -80,7 +80,7 @@ namespace Contratista.Empleado
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new AgregarCatalogo(idServicio, nombre_servicio));
         }
     }
 }

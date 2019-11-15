@@ -601,10 +601,6 @@ namespace Contratista.Empleado
                     await DisplayAlert("Hey", result.StatusCode.ToString(), "Fale Ferga");
                     await Navigation.PopAsync();
                 }
-
-
-
-
             }
             catch (Exception err)
             {
