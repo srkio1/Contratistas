@@ -7,7 +7,7 @@
             BarTextColor="White"
             NavigationPage.HasNavigationBar="False">
     <!--Pages can be added as references or inline-->
-    <ContentPage Title="CATEGORIAS" Icon="ic_action_developer_board.png">
+    <ContentPage Title="CATEGORIAS1" Icon="ic_action_developer_board.png">
         <ScrollView>
             <StackLayout BackgroundColor="#000000">
                 <StackLayout HorizontalOptions="Fill" HeightRequest="60" BackgroundColor="Black">
